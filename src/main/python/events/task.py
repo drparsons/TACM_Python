@@ -5,3 +5,12 @@ TACM Task Class
 Description: Inhereits Event Class. For holding task
 information.
 """
+
+#Type: Type
+#Description
+
+#Create Task (hooks for GUI to call)
+#Start Task
+#End Task
+
+#Getters and Setters
