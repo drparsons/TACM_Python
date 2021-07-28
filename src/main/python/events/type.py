@@ -5,7 +5,7 @@ TACM Task Class
 Description: Type of task 
 """
 
-class Type(self):
+class Type():
 #Name
 #Description
 #Charge Code
@@ -16,6 +16,8 @@ class Type(self):
         self.chg = chg
         self.comment = comment
 
+    def __str__(self):
+        return self.name
 ##Getters and Setters to be called via createTask()
     def setName(self, Name):
         self.name = Name

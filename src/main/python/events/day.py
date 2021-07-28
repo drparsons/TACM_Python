@@ -11,7 +11,9 @@ information.
 #Date
 #Task Array
 
+
 #Add to Task Array
+#When setting type to task object, search 
 
 #Create Day (Set start time) (hooks for gui to call)
 #End Day
@@ -19,3 +21,5 @@ information.
 
 #Getter/Setter
 
+if __name__ == "__main__":
+    print('hello world')
