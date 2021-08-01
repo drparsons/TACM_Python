@@ -25,6 +25,7 @@ class Task(Event):
 #Getters and Setters
     def getType(self):
         return self.type
+        #return self.type.__str__()
 
     def getDesc(self):
         return self.desc

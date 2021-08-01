@@ -3,6 +3,7 @@ import unittest
 
 # import your test modules
 import test_myMath
+#import test_task
 
 #initialize the test suite
 loader = unittest.TestLoader()
@@ -10,6 +11,7 @@ suite = unittest.TestSuite()
 
 #add test cases
 suite.addTests(loader.loadTestsFromModule(test_myMath))
+#suite.addTests(loader.loadTestsFromModule(test_task))
 
 """
 verbosity:
