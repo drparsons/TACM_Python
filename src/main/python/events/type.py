@@ -31,15 +31,29 @@ class Type():
     def setComment(self, comment):
         self.comment = comment
 
-    def getName(self, Name):
+    def getName(self):
         return self.name
 
-    def getDesc(self, Desc):
+    def getDesc(self):
         return self.desc
 
-    def getChg(self, chg):
+    def getChg(self):
         return self.chg 
     
-    def getComment(self, comment):
+    def getComment(self):
         return self.comment
 #method with hooks for gui
+
+
+if __name__ == "__main__":
+    print("Hello World!")
+    type0 = Type()
+    print(type0)
+    type0.setName("Set")
+    print(type0)
+    type1 = Type("TestName", "TestDescription", "CHG001", "TestComment")
+    print(type1)
+    print("Name: ", type1.getName())
+    print("Desc: ", type1.getDesc())
+    print("Chg: ", type1.getName())
+    print("Comment: ", type1.getComment())
