@@ -5,6 +5,7 @@ import unittest
 import test_task
 import test_type
 import test_event
+import test_day
 
 #initialize the test suite
 loader = unittest.TestLoader()
@@ -14,6 +15,7 @@ suite = unittest.TestSuite()
 suite.addTests(loader.loadTestsFromModule(test_task))
 suite.addTests(loader.loadTestsFromModule(test_type))
 suite.addTests(loader.loadTestsFromModule(test_event))
+suite.addTests(loader.loadTestsFromModule(test_day))
 
 """
 verbosity:
