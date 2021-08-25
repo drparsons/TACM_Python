@@ -33,6 +33,17 @@ class Test_Event(unittest.TestCase):
         time.sleep(1)
         event0.setEnd()
         self.assertGreaterEqual(float(event0.duration()), 1)
+    
+    def test_convert(self):
+        event0 = Event()
+        self.assertEqual(event0.convertToSeconds("03:55:05 AM"), 14105)
+        self.assertEqual(event0.convertToSeconds("03:55:05 PM"), 446105)
+
+    def test_setTime(self):
+        task2 = Event()
+        task2.customSetStart("03:55:05 AM")
+        task2.customSetEnd("03:55:05 PM")
+        self.assertEqual(task2.duration(),"12:00:00")
 
 if __name__ == "__main__":
     unittest.main()

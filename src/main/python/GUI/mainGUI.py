@@ -41,8 +41,8 @@ frame.grid(row=0, column=0, sticky="nsew")
 
 #size
 TaskTypeWidth = 15
-TaskDescWidth = 25
-TaskTimeWidth = 10
+TaskDescWidth = 20
+TaskTimeWidth = 12
 
 #Task Type
 e = tk.Entry(frame, width=TaskTypeWidth)
@@ -77,15 +77,15 @@ for itr, task in enumerate(day0.getTasks()):
     #TODO Start Time
     f = tk.Entry(frame, width=TaskTimeWidth)
     f.grid(row=itr + 1,column=2)
-    f.insert(END, task1.get)
+    f.insert(END, task.getStart())
     #TODO End Time
     f = tk.Entry(frame, width=TaskTimeWidth)
     f.grid(row=itr + 1,column=3)
-    f.insert(END, "End Time")
+    f.insert(END, task.getEnd())
     #TODO Duration
     f = tk.Entry(frame, width=TaskTimeWidth)
     f.grid(row=itr + 1,column=4)
-    f.insert(END, "Duration")
+    f.insert(END, task.duration())
 
 
 #-------------Side Buttons---------------
@@ -103,7 +103,13 @@ button2 = tk.Button(
     width=15
 )
 button2.grid(row=1, column=0)
-
+buttonExit = tk.Button(
+    master=frame2,
+    text="Exit",
+    width=15,
+    command=window.quit
+)
+buttonExit.grid(row=3, column=0)
 #----------Bottom Buttons-----------
 #TODO doesn't work, should be on bottom
 frame3 = tk.Frame(master=window, border=5)
