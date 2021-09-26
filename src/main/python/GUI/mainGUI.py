@@ -38,16 +38,16 @@ class popupWindow(object):
         self.b=Button(top,text='Ok',command=self.cleanup)
         self.b.pack()
         self.top.bind('<Return>',self.enter_cleanup)
+        """
+        #dropdown for typess
         self.type = tk.StringVar(self)
-        type1 = Type("TestName1", "TestDescription1", "CHG001", "TestComment1")
-        type2 = Type("TestName2", "TestDescription2", "CHG002", "TestComment2")
-        types = [type1, type2]
         self.option = tk.OptionMenu(
             self,
             self.type,
             str(types[0]),
             *self.types
         )
+        """
     def enter_cleanup(self, key_press):
         print(key_press) #'<Return>' bind gives 2 arguments 
         self.cleanup()
